@@ -1,0 +1,11 @@
+restautix_welcome:
+    pattern: /{page}
+    defaults: { _controller: FDARestautixBundle:Restautix:index , page: 1}
+    requirements:
+      page:  \d*
+
+restautix_readEvent:
+    pattern: /event/{id}
+    defaults: { _controller: FDARestautixBundle:Restautix:readEvent }
+    requirements:
+      id:  \d+

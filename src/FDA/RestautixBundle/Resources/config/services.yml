@@ -1,0 +1,7 @@
+parameters:
+#    fda_restautix.example.class: FDA\RestautixBundle\Example
+
+services:
+#    fda_restautix.example:
+#        class: %fda_restautix.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

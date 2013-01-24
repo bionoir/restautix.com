@@ -1,3 +1,7 @@
+fda_restautix:
+    resource: "@FDARestautixBundle/Resources/config/routing.yml"
+    prefix:   /restautix
+
 # Internal routing configuration to handle ESI
 # ****** WARNING ******
 # This route should be enabled with caution as it can open a security vulnerability
