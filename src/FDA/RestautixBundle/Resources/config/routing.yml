@@ -1,11 +1,27 @@
 restautix_welcome:
     pattern: /{page}
-    defaults: { _controller: FDARestautixBundle:Restautix:index , page: 1}
+    defaults: { _controller: FDARestautixBundle:Restautix:accueil , page: 1}
     requirements:
       page:  \d*
 
 restautix_readEvent:
     pattern: /event/{id}
     defaults: { _controller: FDARestautixBundle:Restautix:readEvent }
+    requirements:
+      id:  \d+
+
+restautix_addEvent:
+    pattern: /addEvent
+    defaults: { _controller: FDARestautixBundle:Restautix:addEvent }
+
+restautix_modifyEvent:
+    pattern: /modifyEvent/{id}
+    defaults: { _controller: FDARestautixBundle:Restautix:modifyEvent }
+    requirements:
+      id:  \d+
+
+restautix_deleteEvent:
+    pattern: /deleteEvent/{id}
+    defaults: { _controller: FDARestautixBundle:Restautix:deleteEvent }
     requirements:
       id:  \d+

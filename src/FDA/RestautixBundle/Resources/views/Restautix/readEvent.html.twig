@@ -1,13 +1,29 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Bievenue sur la page de Restautix, l'application pour gérer vos repas entre collègues :-)</title>
-    </head>
-    <body>
-        <h1>Evenement {{ event }} !</h1>
-        
-        <p>
-            Numéro de l'événement {{ idEvent }}.
-        </p>
-    </body>
-</html>
+{% extends "FDARestautixBundle::layout.html.twig" %}
+ 
+{% block title %}Lecture d'un événement - {{ parent() }}{% endblock %}
+ 
+{% block fdarestautix_body %}
+ 
+  <h2>{{ event.title }}</h2>
+  <i>Par {{ event.author }}, le {{ event.date|date('d/m/Y') }}</i>
+ 
+  <div class="well">
+    {{ event.content }}
+  </div>
+ 
+  <p>
+    <a href="{{ path('restautix_welcome') }}" class="btn">
+      <i class="icon-chevron-left"></i>
+      Retour à la liste
+    </a>
+    <a href="{{ path('restautix_modifyEvent', {'id': event.id}) }}" class="btn">
+      <i class="icon-edit"></i>
+      Modifier l'événement
+    </a>
+    <a href="{{ path('restautix_deleteEvent', {'id': event.id}) }}" class="btn">
+      <i class="icon-trash"></i>
+      Supprimer l'événement
+    </a>
+  </p>
+ 
+{% endblock %}

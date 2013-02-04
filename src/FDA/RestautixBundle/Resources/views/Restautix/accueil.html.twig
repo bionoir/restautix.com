@@ -1,0 +1,19 @@
+{% extends "FDARestautixBundle::layout.html.twig" %}
+
+{% block title %}Accueil - {{ parent() }}{% endblock %}
+
+{% block fdarestautix_body %}
+    <h2>Liste des événements</h2>
+ 
+    <ul>
+        {% for event in eventsList %}
+        <li>
+            <a href="{{ path('restautix_readEvent', {'id': event.id}) }}">{{ event.titre }}</a>
+            par {{ event.auteur }},
+            le {{ event.date|date('d/m/Y') }}
+        </li>
+        {% else %}
+        <li>Pas (encore !) d'événements</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

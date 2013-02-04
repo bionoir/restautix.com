@@ -1,0 +1,7 @@
+<h3>Derniers événements</h3>
+<ul class="nav nav-pills nav-stacked">
+  {% for event in eventsList %}
+    <li><a href="{{ path('restautix_readEvent', {'id': event.id}) }}">{{ event.titre }}</a></li>
+  {% endfor %}
+</ul>
+</ul>

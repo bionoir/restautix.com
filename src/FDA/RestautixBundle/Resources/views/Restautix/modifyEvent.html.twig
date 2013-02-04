@@ -1,0 +1,21 @@
+{% extends "FDARestautixBundle::layout.html.twig" %}
+
+{% block title %}Modifier un événement - {{ parent() }}{% endblock %}
+
+{% block fdarestautix_body %}
+
+    <h2>Modifier un événement</h2>
+    
+    {% include "FDARestautixBundle:Restautix:formEvent.html.twig" %}
+    
+    <p>
+        Vous éditez un événement déjà existant.
+    </p>
+    
+    <p>
+    <a href="{{ path('restautix_readEvent', {'id': event.id}) }}" class="btn">
+      <i class="icon-chevron-left"></i>
+      Retour à l'événement
+    </a>
+  </p>
+{% endblock %}

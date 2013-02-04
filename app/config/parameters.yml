@@ -12,3 +12,4 @@ parameters:
     locale: en
     secret: e4675910d8b80c2b62960ab7767cbc901
     database_path: null
+    app_webmaster: Fabio Dalmasso

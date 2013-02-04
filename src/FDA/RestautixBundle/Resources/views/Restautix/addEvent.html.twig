@@ -1,0 +1,15 @@
+{% extends "FDARestautixBundle::layout.html.twig" %}
+
+{% block title %}Ajouter événement - {{ parent() }}{% endblock %}
+
+{% block fdarestautix_body %}
+
+    <h2>Ajouter un événement</h2>
+    
+    {% include "FDARestautixBundle:Restautix:formEvent.html.twig" %}
+    
+    <p>
+        Attention : l'événement sera ajouté directement sur la page
+        d'accueil après validation du formulaire.
+    </p>
+{% endblock %}
